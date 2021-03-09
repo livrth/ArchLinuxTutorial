@@ -7,7 +7,7 @@
 提供在线网页文档，承诺健在即更新。
 </p>
 
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FArchLinuxStudio%2FArchLinuxTutorial&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
+[![Badge](https://img.shields.io/badge/link-ArchLinuxTutorial-%230088cc.svg)](https://archlinuxstudio.github.io/ArchLinuxTutorial) [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FArchLinuxStudio%2FArchLinuxTutorial&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com) [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/) [![Lines](https://img.shields.io/tokei/lines/github/ArchLinuxStudio/ArchLinuxTutorial)](https://img.shields.io/tokei/lines/github/ArchLinuxStudio/ArchLinuxTutorial) [![lastcommit](https://img.shields.io/github/last-commit/ArchLinuxStudio/ArchLinuxTutorial)](https://img.shields.io/github/last-commit/ArchLinuxStudio/ArchLinuxTutorial)
 
 ## [阅读地址](https://ArchLinuxStudio.github.io/ArchLinuxTutorial/#/)
 
