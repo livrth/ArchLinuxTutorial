@@ -5,7 +5,7 @@
 相关视频链接： [2020ArchLinux 安装 KDE 桌面&Fcitx5 输入法配置](https://www.bilibili.com/video/BV1Vk4y117jc) 视频文字结合效果更好  
 注: 文档中带有 <sup>AUR</sup> 角标的软件代表是用户自行打包的第三方软件[AUR](https://aur.archlinux.org/)，不在 Arch 官方支持范围内，可能会出现各种问题。如果不是实在没有官方支持的同类软件，则不建议使用。
 
-#### 1.确保系统为最新
+## 1.确保系统为最新
 
 如果你在做完上一节的内容后，重启并放置过一段时间，那需要先按照上节末尾处的方式重新连接网络，然后更新系统。
 
@@ -13,7 +13,7 @@
 pacman -Syyu    #升级系统中全部包
 ```
 
-#### 2.准备非 root 用户
+## 2.准备非 root 用户
 
 添加用户，比如新增加的用户叫 testuser
 
@@ -54,13 +54,13 @@ nobody       ALL=(root) NOPASSWD: /usr/sbin/rndc reload
 组 mailadmin 可以作为 root 用户，执行一些邮件服务器控制命令。可以在 "snow" 和 "rain"这两台主机上执行  
 用户 nobody 可以以 root 用户执行`rndc reload`命令。可以在所有主机上执行。同时可以不输入密码。(正常来说 sudo 都是要求输入调用方的密码的)
 
-#### 3.安装 KDE Plasma 桌面环境
+## 3.安装 KDE Plasma 桌面环境
 
 ```bash
 pacman -S plasma-meta konsole dolphin  #安装plasma-meta元软件包以及终端和文件管理器
 ```
 
-#### 4.配置 greeter sddm
+## 4.配置 greeter sddm
 
 <!-- pacman -S sddm //包含在plasma-meta了 不用单独装
 但是plasma-desktop 没有 还是要装
@@ -70,7 +70,7 @@ pacman -S plasma-meta konsole dolphin  #安装plasma-meta元软件包以及终�
 systemctl enable sddm
 ```
 
-#### 5.开启 32 位支持库与 ArchLinuxCN 支持库
+## 5.开启 32 位支持库与 ArchLinuxCN 支持库
 
 ```bash
 vim /etc/pacman.conf
@@ -100,7 +100,7 @@ pacman -Syyu
 
 重启电脑，即可看到欢迎界面，输入新用户的密码即可登录桌面
 
-#### 6.安装基础功能包
+## 6.安装基础功能包
 
 进入桌面后，搜索 konsole。它是 KDE 桌面环境默认的命令行终端。  
 接下来我们进行网络配置与连接，并安装一些基础功能包。
@@ -127,7 +127,7 @@ sudo pacman -S yay                                                          #yay
 
 若安装 archlinuxcn-keyring 时报错，是由于密钥环的问题，可先按照[此链接](https://www.archlinuxcn.org/gnupg-2-1-and-the-pacman-keyring/)执行其中的命令，再安装 archlinuxcn-keyring
 
-#### 7.检查家目录
+## 7.检查家目录
 
 检查家目录下的各个常见目录是否已经创建，若没有则需手动创建。
 
@@ -136,7 +136,7 @@ cd /home/testuser
 mkdir Desktop Documents Downloads Music Pictures Videos
 ```
 
-#### 8.设置系统为中文
+## 8.设置系统为中文
 
 打开 _System Settings_ > _Regional Settings_ > _Language_ 中选择中文加入，再拖拽到第一位，Apply。
 
@@ -144,7 +144,7 @@ mkdir Desktop Documents Downloads Music Pictures Videos
 
 > 很多人会错误的更改 _System Settings_ > _Regional Settings_ > _Formats_ 中的值为中文蒙古，默认，或者其他值，这会导致系统中一半英文一般中文。这里的值要保持默认的 en_US 或 zh_CN,或者改为你在 locale.gen 中添加的任意一种语言。
 
-#### 9.安装输入法
+## 9.安装输入法
 
 [Fcitx5 官方文档](<https://wiki.archlinux.org/index.php/Fcitx5_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)  
 中文及日文输入法均体验良好。
@@ -177,12 +177,12 @@ SDL_IM_MODULE DEFAULT=fcitx
 
 注销，重新登陆，就可以发现已经可以在各个软件中输入中文了
 
-#### 10.启动蓝牙(若有)
+## 10.启动蓝牙(若有)
 
 ```bash
 sudo systemctl enable --now bluetooth
 ```
 
-#### 11.字体设置
+## 11.字体设置
 
 个人的设置是英文使用 Hack，中文使用 Noto Sans CJK SC。可以在系统设置->字体中进行设置。有关用户全局级别更改日文异型字的设置，可参考[官方文档](<https://wiki.archlinux.org/index.php/Localization_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)/Simplified_Chinese_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E4%BF%AE%E6%AD%A3%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%E6%98%BE%E7%A4%BA%E4%B8%BA%E5%BC%82%E4%BD%93%EF%BC%88%E6%97%A5%E6%96%87%EF%BC%89%E5%AD%97%E5%BD%A2>)
